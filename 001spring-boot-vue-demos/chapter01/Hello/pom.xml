@@ -10,11 +10,11 @@
   </parent>
 
   <groupId>com.east</groupId>
-  <artifactId>Chapter01Demo01</artifactId>
+  <artifactId>Hello</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Chapter01Demo01</name>
+  <name>Hello</name>
   <description>Demo project for Spring Boot</description>
 
   <properties>
