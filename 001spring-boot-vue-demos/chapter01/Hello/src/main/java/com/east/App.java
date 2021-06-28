@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Hello world!
@@ -15,6 +17,8 @@ import org.springframework.context.annotation.ComponentScan;
  @EnableAutoConfiguration
  // 包扫描
  @ComponentScan
+
+ @RestController
 
  // 组合注解@SpringBootApplication代替@EnableAutoConfiguration和 @ComponentScan
 // @SpringBootApplication
@@ -26,5 +30,10 @@ public class App
         builder.bannerMode(Banner.Mode.CONSOLE).run(args);
 
 //        SpringApplication.run(App.class, args);
+    }
+
+    @RequestMapping("/")
+    String home() {
+        return "Hello Spring boot!";
     }
 }
